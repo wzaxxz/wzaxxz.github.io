@@ -63,7 +63,25 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Стилі для секції подій */
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    body {
+        background-size: auto;
+    }
+}
+
 .events-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
