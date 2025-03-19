@@ -80,8 +80,11 @@ h2 {
     }
 
     header nav ul li {
-        text-decoration: underline;
         margin: 10px 0;
+    }
+
+    header nav ul li a:hover {
+        text-decoration: underline;
     }
 
     body {
