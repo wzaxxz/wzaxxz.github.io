@@ -64,9 +64,9 @@ h2 {
 
 @media (max-width: 768px) {
     .events-grid {
-		display: grid;    
-        width: 100%;
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px;
     }
 
     .events-card img {
