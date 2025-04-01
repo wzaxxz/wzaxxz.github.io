@@ -20,9 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
             bookingItem.textContent = `${eventName} - ${quantity} квитків (Сума: ${totalPrice} грн)`;
             bookingsList.appendChild(bookingItem);
 
-            // Відключення кнопки після бронювання
             bookButton.textContent = "Заброньовано";
             bookButton.disabled = true;
+
+            bookButton.style.transform = "scale(0.95)";
+            setTimeout(() => {
+                bookButton.style.transform = "scale(1)";
+            }, 150);
         });
     });
 });
