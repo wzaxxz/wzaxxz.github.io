@@ -64,8 +64,6 @@ h2 {
 
 @media (max-width: 768px) {
     .events-grid {
-        display: grid;
-        width: 100%;
         grid-template-columns: 1fr;
     }
 
