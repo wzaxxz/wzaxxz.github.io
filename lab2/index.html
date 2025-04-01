@@ -24,44 +24,62 @@
                 <div class="event-card">
                     <img src="event1.jpg" alt="Подія 1">
                     <h3>Концерт "Rock Night"</h3>
-                    <p>Дата: 15 квітня 2025</p>
+                    <p class="event-date">Дата: 15 квітня 2025</p>
                     <p>Місце: Київ, Палац Спорту</p>
-                    <p>Ціна: 1500 грн</p>
+                    <p class="event-price" data-price="1500">Ціна: 1500 грн</p>
+                    <label>Кількість квитків: 
+                        <input type="number" class="ticket-quantity" min="1" value="1">
+                    </label>
+                    <button class="book-button">Забронювати</button>
                 </div>
+
                 <div class="event-card">
                     <img src="event2.jpg" alt="Подія 2">
                     <h3>Ярмарок сиру та вина</h3>
-                    <p>Дата: 20 квітня 2025</p>
+                    <p class="event-date">Дата: 20 квітня 2025</p>
                     <p>Місце: Львів, Палац Потоцьких</p>
-                    <p>Ціна: 300 грн</p>
+                    <p class="event-price" data-price="300">Ціна: 300 грн</p>
+                    <label>Кількість квитків: 
+                        <input type="number" class="ticket-quantity" min="1" value="1">
+                    </label>
+                    <button class="book-button">Забронювати</button>
                 </div>
+
                 <div class="event-card">
                     <img src="event3.jpg" alt="Подія 3">
                     <h3>Весняний стендап</h3>
-                    <p>Дата: 6 травня 2025</p>
+                    <p class="event-date">Дата: 6 травня 2025</p>
                     <p>Місце: Одеса, Будинок Клоунів</p>
-                    <p>Ціна: 750 грн</p>
+                    <p class="event-price" data-price="750">Ціна: 750 грн</p>
+                    <label>Кількість квитків: 
+                        <input type="number" class="ticket-quantity" min="1" value="1">
+                    </label>
+                    <button class="book-button">Забронювати</button>
                 </div>
+
                 <div class="event-card">
                     <img src="event4.jpg" alt="Подія 4">
                     <h3>Кіно під відкритим небом</h3>
-                    <p>Дата: 28 червня 2025</p>
+                    <p class="event-date">Дата: 28 червня 2025</p>
                     <p>Місце: Львів, Стрийський Парк</p>
-                    <p>Ціна: 150 грн</p>
+                    <p class="event-price" data-price="150">Ціна: 150 грн</p>
+                    <label>Кількість квитків: 
+                        <input type="number" class="ticket-quantity" min="1" value="1">
+                    </label>
+                    <button class="book-button">Забронювати</button>
                 </div>
             </div>
         </section>
         
         <section id="bookings">
             <h2>Мої бронювання</h2>
-            <p>У вас поки що немає заброньованих квитків.</p>
+            <ul class="bookings-list"></ul>
         </section>
         
         <section id="about">
             <h2>Про нас</h2>
             <p> 
-                Ми - команда ентузіастів, які створюють яскраві події та незабутні враження. Наша історія почалася з групи друзів, які об'єдналися, щоб зробити культурне життя в Україні ще цікавішим. За роки роботи ми організували сотні заходів – від концертів та фестивалів до бізнес-конференцій та театральних вистав.  
-                Наша місія - зробити кожну подію доступною, комфортною та емоційно насиченою. Ми співпрацюємо з кращими майданчиками, артистами та організаторами, щоб запропонувати вам найкращі події країни.       
+                Ми - команда ентузіастів, які створюють яскраві події та незабутні враження. Наша місія - зробити кожну подію доступною, комфортною та емоційно насиченою. 
                 Обирайте, бронюйте, приходьте - ми подбаємо про все інше!
             </p>
         </section>
@@ -70,5 +88,7 @@
     <footer>
         <p>Контакти: overes228@gmail.com | Телефон: +380 98 952 1982</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
