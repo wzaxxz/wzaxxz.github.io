@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed&display=swap');
+
+body {
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 20px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 15px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 70px;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .events-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .events-card img {
+        width: 100%;
+        height: auto;
+        max-height: px;
+        object-fit: cover;
+    }
+
+    header nav ul {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    body {
+        background-size: auto;
+    }
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-card {
+    background-color: rgba(51, 51, 51, 0.8);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-card img {
+    max-width: 100%;
+    height: 300px; 
+    border-radius: 8px;
+}
+
+.event-card h3 {
+    margin: 15px 0 10px;
+}
+
+.event-card p {
+    margin: 5px 0;
+}
+
+#about p, #bookings p {
+    font-size: 18px;
+    line-height: 1.6; 
+}
+
+.booked-event-card {
+    background-color: rgba(128, 128, 128, 0.4); 
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: none;
+    filter: grayscale(100%); 
+    opacity: 0.6; 
+    pointer-events: none; 
+    transition: all 0.3s ease;
+}
+
+.booked-event-card img {
+    max-width: 100%;
+    height: 300px; 
+    border-radius: 8px;
+    filter: grayscale(100%) brightness(80%);
+}
+
+.booked-event-card h3,
+.booked-event-card p {
+    color: #ccc;
+}
+
+.book-button {
+    background: linear-gradient(45deg, #f74c4c, #990000); 
+    font-family: "Sofia Sans Extra Condensed", sans-serif;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-button:hover {
+    background: linear-gradient(45deg, #f74c4c, #990000);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.book-button:disabled {
+    background: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.ticket-quantity {
+    width: 60px;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid #f74c4c;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.ticket-quantity:focus {
+    border-color: #990000;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bookings-list {
+    list-style: none;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.bookings-list li {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+}
+
+.summary {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 15px auto;
+    font-size: 18px;
+}
+
