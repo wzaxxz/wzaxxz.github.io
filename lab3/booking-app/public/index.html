@@ -1,43 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронювання квитків</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#events">Події</a></li>
+                <li><a href="#bookings">Мої бронювання</a></li>
+                <li><a href="#about">Про нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="events">
+            <h2>Майбутні події</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <img src="event1.jpg" alt="Подія 1">
+                    <h3>Концерт "Rock Night"</h3>
+                    <p class="event-date">Дата: 15 квітня 2025</p>
+                    <p>Місце: Київ, Палац Спорту</p>
+                    <p class="event-price" data-price="1500">Ціна: 1500 грн</p>
+                    <label>Кількість квитків: 
+                        <input type="number" class="ticket-quantity" min="1" value="1">
+                    </label>
+                    <button class="book-button">Забронювати</button>
+                </div>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+                <div class="event-card">
+                    <img src="event2.jpg" alt="Подія 2">
+                    <h3>Ярмарок сиру та вина</h3>
+                    <p class="event-date">Дата: 20 квітня 2025</p>
+                    <p>Місце: Львів, Палац Потоцьких</p>
+                    <p class="event-price" data-price="300">Ціна: 300 грн</p>
+                    <label>Кількість квитків: 
+                        <input type="number" class="ticket-quantity" min="1" value="1">
+                    </label>
+                    <button class="book-button">Забронювати</button>
+                </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+                <div class="event-card">
+                    <img src="event3.jpg" alt="Подія 3">
+                    <h3>Весняний стендап</h3>
+                    <p class="event-date">Дата: 6 травня 2025</p>
+                    <p>Місце: Одеса, Будинок Клоунів</p>
+                    <p class="event-price" data-price="750">Ціна: 750 грн</p>
+                    <label>Кількість квитків: 
+                        <input type="number" class="ticket-quantity" min="1" value="1">
+                    </label>
+                    <button class="book-button">Забронювати</button>
+                </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                <div class="event-card">
+                    <img src="event4.jpg" alt="Подія 4">
+                    <h3>Кіно під відкритим небом</h3>
+                    <p class="event-date">Дата: 28 червня 2025</p>
+                    <p>Місце: Львів, Стрийський Парк</p>
+                    <p class="event-price" data-price="150">Ціна: 150 грн</p>
+                    <label>Кількість квитків: 
+                        <input type="number" class="ticket-quantity" min="1" value="1">
+                    </label>
+                    <button class="book-button">Забронювати</button>
+                </div>
+
+                <div class="booked-event-card">
+                    <img src="event5.jpg" alt="Подія 5">
+                    <h3>Концерт Океан Ельзи</h3>
+                    <p class="event-date">Дата: 12 січня 2025</p>
+                    <p>Місце: Львів, Palladium</p>
+                    <p class="event-price" data-price="150">Ціна: 900 грн</p>
+                    <button class="book-button">Забронювати</button>
+                </div>
+
+                <div class="booked-event-card">
+                    <img src="event6.jpg" alt="Подія 4">
+                    <h3>Сірано Де Бержерак</h3>
+                    <p class="event-date">Дата: 18 лютого 2025</p>
+                    <p>Місце: Львів, Національний драматичний театр імені Марії Заньковецької</p>
+                    <p class="event-price" data-price="150">Ціна: 650 грн</p>
+                    <button class="book-button">Забронювати</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="bookings">
+            <h2>Мої бронювання</h2>
+            <ul class="bookings-list"></ul>
+            <div class="summary">
+                <p><strong>Загальна кількість квитків:</strong> <span id="total-tickets">0</span></p>
+                <p><strong>Загальна сума бронювань:</strong> <span id="total-price">0</span> грн</p>
+            </div>
+            
+        </section>
+        
+        <section id="about">
+            <h2>Про нас</h2>
+            <p> 
+                Ми - команда ентузіастів, які створюють яскраві події та незабутні враження. Наша місія - зробити кожну подію доступною, комфортною та емоційно насиченою. 
+                Обирайте, бронюйте, приходьте - ми подбаємо про все інше!
+            </p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Контакти: overes228@gmail.com | Телефон: +380 98 952 1982</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
