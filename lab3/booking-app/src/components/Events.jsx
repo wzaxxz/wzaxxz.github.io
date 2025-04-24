@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import EventCard from "./EventCard";
+import event1 from "./event1.jpg";
+import event2 from "./event2.jpg";
+import event3 from "./event3.jpg";
+import event4 from "./event4.jpg";
+import event5 from "./event5.jpg";
+import event6 from "./event6.jpg";
 
-// Статичний масив подій. (Приклади: концерт, ярмарок, стендап, кіно, театр)
-// Дату зручно зберігати у форматі ISO для подальшого сортування.
 const initialEvents = [
   {
     id: 1,
@@ -10,7 +14,7 @@ const initialEvents = [
     date: "2025-04-15",
     location: "Київ, Палац Спорту",
     price: 1500,
-    image: "event1.jpg",
+    image: event1,
     type: "концерт",
     available: true,
   },
@@ -20,7 +24,7 @@ const initialEvents = [
     date: "2025-04-20",
     location: "Львів, Палац Потоцьких",
     price: 300,
-    image: "event2.jpg",
+    image: event2,
     type: "ярмарок",
     available: true,
   },
@@ -30,7 +34,7 @@ const initialEvents = [
     date: "2025-05-06",
     location: "Одеса, Будинок Клоунів",
     price: 750,
-    image: "event3.jpg",
+    image: event3,
     type: "стендап",
     available: true,
   },
@@ -40,7 +44,7 @@ const initialEvents = [
     date: "2025-06-28",
     location: "Львів, Стрийський Парк",
     price: 150,
-    image: "event4.jpg",
+    image: event4,
     type: "кіно",
     available: true,
   },
@@ -50,9 +54,9 @@ const initialEvents = [
     date: "2025-01-12",
     location: "Львів, Palladium",
     price: 900,
-    image: "event5.jpg",
+    image: event5,
     type: "концерт",
-    available: false, // вже відбулась
+    available: false,
   },
   {
     id: 6,
@@ -60,22 +64,21 @@ const initialEvents = [
     date: "2025-02-18",
     location: "Львів, Національний драматичний театр",
     price: 650,
-    image: "event6.jpg",
+    image: event6,
     type: "театр",
-    available: false, // вже відбулась
+    available: false, 
   },
 ];
 
 function Events({ addBooking }) {
   const [filterType, setFilterType] = useState("all");
-  const [sortOption, setSortOption] = useState("dateAsc");
+  const [sortOption, setSortOption] = useState("dateDesc");
 
-  // Фільтрування подій за типом і сортування за датою
   const filteredEvents = initialEvents
     .filter((event) => filterType === "all" || event.type === filterType)
     .sort((a, b) => {
-      if (sortOption === "dateAsc") return new Date(a.date) - new Date(b.date);
       if (sortOption === "dateDesc") return new Date(b.date) - new Date(a.date);
+      if (sortOption === "dateAsc") return new Date(a.date) - new Date(b.date);
       return 0;
     });
 
@@ -104,8 +107,8 @@ function Events({ addBooking }) {
               value={sortOption}
               onChange={(e) => setSortOption(e.target.value)}
             >
-              <option value="dateAsc">За зростанням дати</option>
               <option value="dateDesc">За спаданням дати</option>
+              <option value="dateAsc">За зростанням дати</option>
             </select>
           </label>
         </div>

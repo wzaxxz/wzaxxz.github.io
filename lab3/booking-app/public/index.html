@@ -1,117 +1,12 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Бронювання квитків</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#events">Події</a></li>
-                <li><a href="#bookings">Мої бронювання</a></li>
-                <li><a href="#about">Про нас</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="events">
-            <h2>Майбутні події</h2>
-            <div class="events-grid">
-                <div class="event-card">
-                    <img src="event1.jpg" alt="Подія 1">
-                    <h3>Концерт "Rock Night"</h3>
-                    <p class="event-date">Дата: 15 квітня 2025</p>
-                    <p>Місце: Київ, Палац Спорту</p>
-                    <p class="event-price" data-price="1500">Ціна: 1500 грн</p>
-                    <label>Кількість квитків: 
-                        <input type="number" class="ticket-quantity" min="1" value="1">
-                    </label>
-                    <button class="book-button">Забронювати</button>
-                </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>EventBooking</title>
 
-                <div class="event-card">
-                    <img src="event2.jpg" alt="Подія 2">
-                    <h3>Ярмарок сиру та вина</h3>
-                    <p class="event-date">Дата: 20 квітня 2025</p>
-                    <p>Місце: Львів, Палац Потоцьких</p>
-                    <p class="event-price" data-price="300">Ціна: 300 грн</p>
-                    <label>Кількість квитків: 
-                        <input type="number" class="ticket-quantity" min="1" value="1">
-                    </label>
-                    <button class="book-button">Забронювати</button>
-                </div>
-
-                <div class="event-card">
-                    <img src="event3.jpg" alt="Подія 3">
-                    <h3>Весняний стендап</h3>
-                    <p class="event-date">Дата: 6 травня 2025</p>
-                    <p>Місце: Одеса, Будинок Клоунів</p>
-                    <p class="event-price" data-price="750">Ціна: 750 грн</p>
-                    <label>Кількість квитків: 
-                        <input type="number" class="ticket-quantity" min="1" value="1">
-                    </label>
-                    <button class="book-button">Забронювати</button>
-                </div>
-
-                <div class="event-card">
-                    <img src="event4.jpg" alt="Подія 4">
-                    <h3>Кіно під відкритим небом</h3>
-                    <p class="event-date">Дата: 28 червня 2025</p>
-                    <p>Місце: Львів, Стрийський Парк</p>
-                    <p class="event-price" data-price="150">Ціна: 150 грн</p>
-                    <label>Кількість квитків: 
-                        <input type="number" class="ticket-quantity" min="1" value="1">
-                    </label>
-                    <button class="book-button">Забронювати</button>
-                </div>
-
-                <div class="booked-event-card">
-                    <img src="event5.jpg" alt="Подія 5">
-                    <h3>Концерт Океан Ельзи</h3>
-                    <p class="event-date">Дата: 12 січня 2025</p>
-                    <p>Місце: Львів, Palladium</p>
-                    <p class="event-price" data-price="150">Ціна: 900 грн</p>
-                    <button class="book-button">Забронювати</button>
-                </div>
-
-                <div class="booked-event-card">
-                    <img src="event6.jpg" alt="Подія 4">
-                    <h3>Сірано Де Бержерак</h3>
-                    <p class="event-date">Дата: 18 лютого 2025</p>
-                    <p>Місце: Львів, Національний драматичний театр імені Марії Заньковецької</p>
-                    <p class="event-price" data-price="150">Ціна: 650 грн</p>
-                    <button class="book-button">Забронювати</button>
-                </div>
-            </div>
-        </section>
-        
-        <section id="bookings">
-            <h2>Мої бронювання</h2>
-            <ul class="bookings-list"></ul>
-            <div class="summary">
-                <p><strong>Загальна кількість квитків:</strong> <span id="total-tickets">0</span></p>
-                <p><strong>Загальна сума бронювань:</strong> <span id="total-price">0</span> грн</p>
-            </div>
-            
-        </section>
-        
-        <section id="about">
-            <h2>Про нас</h2>
-            <p> 
-                Ми - команда ентузіастів, які створюють яскраві події та незабутні враження. Наша місія - зробити кожну подію доступною, комфортною та емоційно насиченою. 
-                Обирайте, бронюйте, приходьте - ми подбаємо про все інше!
-            </p>
-        </section>
-    </main>
-    
-    <footer>
-        <p>Контакти: overes228@gmail.com | Телефон: +380 98 952 1982</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
 </html>
