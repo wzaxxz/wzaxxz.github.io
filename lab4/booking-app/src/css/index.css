@@ -411,3 +411,31 @@ h2 {
 .btn-logout:hover {
   background-color: #c0392b;
 }
+
+/* Star Rating Styles */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.star-rating button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.star-rating .star {
+    font-size: 30px;
+    color: #ccc; /* Колір незаповнених зірок */
+}
+
+.star-rating button.on .star {
+    color: #ffd700; /* Золотий колір для заповнених зірок */
+}
+
+.star-rating button:disabled {
+    cursor: not-allowed;
+}
